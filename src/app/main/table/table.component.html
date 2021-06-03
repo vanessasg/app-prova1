@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="table-responsive">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+    </div>
+    <table class="table">
+      <tr>
+        <th *ngFor='let head of headers'>{{head}}</th>
+      </tr>
+      <tr *ngFor='let user of users | filter:filterTerm'>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.country}}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
