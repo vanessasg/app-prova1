@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../user.service';
+import { User } from 'src/app/user';
+
 
 @Component({
   selector: 'app-table',
@@ -8,7 +10,7 @@ import { UserService } from '../../user.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  users: any = []
+  users: User[]
   headers = ['ID','Name','Lastname', 'Age', 'Email', 'Country']
   filterTerm: string;
 

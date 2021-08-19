@@ -10,21 +10,21 @@ import { User } from './user';
 })
 export class UserService {
 
-  mockUrl = 'http://localhost:3000' //json-server --watch src/backend/mock-users.json
+  //mockUrl = 'http://localhost:3000' //json-server --watch src/backend/mock-users.json
+  mockUrl = '../assets/mock-users2.json';
 
-
-  constructor(private http: HttpClient) { }
-
-  httpHeader = {
+  constructor(private http: HttpClient) {  }
+/*
+  HttpHeaders = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
-
-  getUsers(): Observable<User>{
-    return this.http.get<User>(this.mockUrl + '/users')
+*/
+  getUsers(): Observable<User[]>{
+    return this.http.get<User[]>(this.mockUrl) ///users
     .pipe(
-      retry(1)
+      retry(3) //riprova 3 volte se la richiesta non va a buon fine
     )
   }
 
