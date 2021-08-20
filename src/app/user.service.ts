@@ -11,7 +11,7 @@ import { User } from './user';
 export class UserService {
 
   //mockUrl = 'http://localhost:3000' //json-server --watch src/backend/mock-users.json
-  mockUrl = '../assets/mock-users2.json';
+  mockUrl = 'https://raw.githubusercontent.com/vanessasg/table-and-chart-angular/master/src/assets/mock-users2.json';
 
   constructor(private http: HttpClient) {  }
 /*
