@@ -876,7 +876,7 @@ class UserService {
     constructor(http) {
         this.http = http;
         //mockUrl = 'http://localhost:3000' //json-server --watch src/backend/mock-users.json
-        this.mockUrl = '../assets/mock-users2.json';
+        this.mockUrl = 'https://raw.githubusercontent.com/vanessasg/table-and-chart-angular/master/src/assets/mock-users2.json';
     }
     /*
       HttpHeaders = {
